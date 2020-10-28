@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 
-export default function CommentBox ({message = '', replyId = null, placeholderTxt = 'Type your message', handleNewComment}) {
+export default function CommentBox ({message = '', replyId = 0, placeholderTxt = 'Type your message', handleNewComment}) {
   const [newMessage, setNewMessage] = useState(message)
   const [newReplyId] = useState(replyId)
   const [placeholder] = useState(placeholderTxt)

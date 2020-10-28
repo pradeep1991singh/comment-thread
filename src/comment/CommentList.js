@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import CommentBox from './CommentBox'
 import { buildNestedTree } from '../services/utils'
 
-const CommentItem = React.memo(({comment, handleNewReply}) => {
+const CommentItem = ({comment, handleNewReply, children}) => {
   const [isReply, setIsReply] = useState(false)
 
   const handleReply = () => {
@@ -16,6 +16,10 @@ const CommentItem = React.memo(({comment, handleNewReply}) => {
     handleNewReply(newReply)
   }
 
+  const nestedComments = (comment.children || []).map(comment => {
+    return <CommentItem key={comment.id} comment={comment} handleNewReply={handleNewReply} />
+  })
+
   return (
     <div className="comment-inner-container">
       <p className="comment-message">{comment.message}</p>
@@ -25,21 +29,19 @@ const CommentItem = React.memo(({comment, handleNewReply}) => {
           (<button type="button" onClick={handleReply}>Reply</button>)
         }
       </div>
+      {nestedComments}
     </div>
   )
-})
+}
 
 const CommentList = React.memo(({handleNewReply}) => {
-  let comments = useSelector(state => state.commentStore.comments)
-
-  // todo: handle nested comment rendering
+  const comments = useSelector(state => state.commentStore.comments)
   const nestedCommentsTree = buildNestedTree(comments, 0);
-  console.log(nestedCommentsTree);
 
   return (
     <React.Fragment>
       <h4 className="comments-count">{comments && comments.length} Comments</h4>
-      {comments && comments.map((comment) =>
+      {nestedCommentsTree && nestedCommentsTree.map((comment) =>
         <CommentItem key={comment.id} comment={comment} handleNewReply={handleNewReply} />
       )}
     </React.Fragment>

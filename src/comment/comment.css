@@ -5,12 +5,11 @@
 
 .comment-inner-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin-left: 20px;
 }
 
-.comments-count,
-.comment-inner-container .comment-message,
-.comment-inner-container .reply-box {
+.comments-count {
   margin: 10px 10px 10px 20px;
 }
 
