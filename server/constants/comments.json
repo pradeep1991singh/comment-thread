@@ -1,0 +1,33 @@
+[{
+		"id": 1,
+		"message": "Hi There!",
+		"replyId": 0,
+		"status": 1,
+		"createdAt": 1603815737172,
+		"updatedAt": 1603815737172
+	},
+	{
+		"id": 2,
+		"message": "Hey!",
+		"replyId": 1,
+		"status": 1,
+		"createdAt": 1603815737172,
+		"updatedAt": 1603815737172
+	},
+	{
+		"id": 3,
+		"message": "Hows you doing!",
+		"replyId": 0,
+		"status": 1,
+		"createdAt": 1603815737172,
+		"updatedAt": 1603815737172
+	},
+	{
+		"id": 4,
+		"message": "Doing great!",
+		"replyId": 1,
+		"status": 1,
+		"createdAt": 1603815737172,
+		"updatedAt": 1603815737172
+	}
+]

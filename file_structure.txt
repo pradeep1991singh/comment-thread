@@ -1,37 +1,3 @@
-# Comment Thread
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Installation
-
-In the project directory, you can run:
-
-### `npm install`
-
-This will install all required dependencies.\
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the client app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm run server`
-
-Runs the nodejs server app
-Open [http://localhost:9000](http://localhost:9000) or
-Open [http://localhost:9000/api/comment](http://localhost:9000/api/comment) to view it in the browser.
-
-
-## File structure
-
-<pre>
 comment-thread
 ├── README.md
 ├── coverage
@@ -94,12 +60,5 @@ comment-thread
 |     └── reducers.js
 └── yarn.lock
 
+directory: 17 file: 43
 
-## Client React app
-
-Client React app source is inside `src` directory and runs on `3000` port by default;
-
-## Server React app
-
-Server NodeJs app source is inside `server` directory and runs on `9000` port by default;
-</pre>

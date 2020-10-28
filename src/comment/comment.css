@@ -1,0 +1,30 @@
+.comment-container {
+  width: 700px;
+  margin: 10px auto;
+}
+
+.comment-inner-container {
+  display: flex;
+  align-items: center;
+}
+
+.comments-count,
+.comment-inner-container .comment-message,
+.comment-inner-container .reply-box {
+  margin: 10px 10px 10px 20px;
+}
+
+.comment-inner-container  .reply-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.comment-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.comment-box input {
+  height: 30px;
+  width: 90%;
+}
